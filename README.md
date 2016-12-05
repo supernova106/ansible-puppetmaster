@@ -3,3 +3,6 @@
 
 ##Debug
 - `vim /etc/ansible/hosts` to update current server
+
+##Contact
+- Binh Nguyen
