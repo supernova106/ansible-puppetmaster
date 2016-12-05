@@ -1,0 +1,4 @@
+---
+# tasks file for common
+- include: pkg_install_debian.yml 
+- include: puppet_master.yml

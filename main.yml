@@ -1,0 +1,16 @@
+---
+- hosts: localhost
+  connection: local
+  gather_facts: False  
+  roles:
+    - puppetmaster
+
+- name: Configure instance
+  hosts: deploy
+  gather_facts: False
+  remote_user: root
+
+  # so your stuffs here
+
+  roles:
+    - common

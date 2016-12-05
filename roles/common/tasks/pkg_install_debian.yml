@@ -1,0 +1,21 @@
+---
+- name: install python apt
+  become: yes
+  raw: apt-get update && apt-get install -y python-apt python3-apt
+  tags:
+    - common
+
+- name: install system packages
+  become: yes
+  apt: "pkg={{ item }} force=yes state=present update_cache=yes cache_valid_time=3600"
+  with_items:
+  - build-essential 
+  - python-dev 
+  - python-pip 
+  - bridge-utils 
+  - ntp 
+  - zip 
+  - unzip 
+  - curl
+  tags:
+    - common
